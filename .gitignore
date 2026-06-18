@@ -1,0 +1,17 @@
+# Backend
+bin/
+obj/
+.env
+appsettings.Development.json
+develop.json
+
+# Frontend
+client/node_modules/
+client/dist/
+client/.env
+client/develop.json
+
+# System files
+.DS_Store
+Thumbs.db
+.vs/

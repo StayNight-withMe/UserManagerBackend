@@ -1,0 +1,35 @@
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "ConnectionStrings": {
+    "DefaultConnection": "Host=localhost;Port=5432;Database=YourDatabaseName;Username=postgres;Password=YourPassword"
+  },
+  "AllowedHosts": "*",
+  "Jwt": {
+    "Secret": "YourSuperSecretKeyMustBeLongEnough",
+    "Issuer": "AuthApp",
+    "Audience": "AuthApp",
+    "ExpirationDays": 1
+  },
+  "Email": {
+    "SmtpServer": "smtp.mailersend.net",
+    "SmtpPort": 587,
+    "SenderEmail": "your_sender_email",
+    "SenderPassword": "your_password",
+    "Login": "your_login"
+  },
+  "PasswordHasher": {
+    "SaltSize": 16,
+    "HashSize": 32,
+    "Parallelism": 8,
+    "MemorySize": 65536,
+    "Iterations": 4
+  },
+  "AppConfig": {
+    "BaseUrl": "https://localhost:7212"
+  }
+}
