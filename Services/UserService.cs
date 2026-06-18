@@ -48,7 +48,7 @@ namespace WebApplication1.Services
             var users = await _context.Users.Where(u => userIds.Contains(u.Id)).ToListAsync();
             foreach (var user in users)
             {
-                user.Status = user.PreviousStatus ?? UserStatus.active;
+                user.Status = user.PreviousStatus ?? UserStatus.unverified;
                 user.PreviousStatus = null;
             }
             await _context.SaveChangesAsync();
