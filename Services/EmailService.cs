@@ -27,6 +27,7 @@ namespace WebApplication1.Services
 
             using (var client = new SmtpClient())
             {
+                client.Timeout = 30000;
                 _logger.LogInformation("Connecting to SMTP server: {Server}:{Port}", _options.SmtpServer, _options.SmtpPort);
                 await client.ConnectAsync(_options.SmtpServer, _options.SmtpPort, MailKit.Security.SecureSocketOptions.StartTls, ct);
                 _logger.LogInformation("Connected to SMTP server.");
